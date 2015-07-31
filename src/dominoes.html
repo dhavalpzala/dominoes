@@ -2,25 +2,24 @@
 <html>
 <head>
 <title>Dominoes</title>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 <script src="js/linkedlist.js"></script>
 <script src="js/dominoes.js"></script>
 </head>
-<body ng-app="dominoes" ng-controller="MainController" >
+<body ng-app="dominoes" ng-controller="MainController">
 
-<textarea style="width: 500px; height: 200px;" ng-model="inputText" ng-change="find(this.inputText)" >  </textarea>
+	<textarea style="width: 500px; height: 200px;" ng-model="inputText"
+		ng-change="find(this.inputText)">  </textarea>
 
-<br/>
-<ul>
-	<li ng-repeat="index in indexes track by $index">
-		{{$index}}
-		<span ng-repeat="data in index track by $index">
-		{{data}}
-		</span>
-		</div>
-	</li>
-</ul>
-<p> Results Series </p>
-<span ng-repeat="item in results track by $index">{{item + " "}}</span>
+	<br />
+	<ul>
+		<li ng-repeat="index in indexes track by $index">{{$index}} <span
+			ng-repeat="data in index track by $index"> {{data}} </span>
+			</div>
+		</li>
+	</ul>
+	<p>Results Series</p>
+	<span ng-repeat="item in results track by $index">{{item + " "}}</span>
 </body>
 </html>
