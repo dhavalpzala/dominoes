@@ -1,5 +1,6 @@
 function linkedList() {
-	var list = {}, start = null, end = null, resultsStart = null, resultsEnd = null, indexes = [], endIndexes = [];
+    var list = {}, start = null, end = null, resultsStart = null, resultsEnd = null, 
+	    indexes = [], endIndexes = [];
 	function makeNode(data) {
 		return {
 			data : data,

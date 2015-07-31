@@ -1,5 +1,5 @@
 (function() {
-	var app = angular.module("dominoes", []);
+    var app = angular.module("dominoes", []);
 	app.controller("MainController", [ '$scope', function($scope) {
 		$scope.indexes = [];
 		$scope.list = [];
