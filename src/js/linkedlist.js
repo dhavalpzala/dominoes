@@ -1,26 +1,26 @@
+function makeNode(data) {
+    return {
+        data : data,
+        isAvailable : true,
+        next : null
+    };
+}
+function makeIndexNode(node) {
+    return {
+        node : node,
+        next : null
+    };
+}
+function makeResultNode(value1, value2) {
+    return {
+        value1 : value1,
+        value2 : value2,
+        next : null,
+        prev : null
+    };
+}
 function linkedList() {
     var list = {}, start = null, end = null, resultsStart = null, resultsEnd = null, indexes = [], endIndexes = [];
-    function makeNode(data) {
-        return {
-            data : data,
-            isAvailable : true,
-            next : null
-        };
-    }
-    function makeIndexNode(node) {
-        return {
-            node : node,
-            next : null
-        };
-    }
-    function makeResultNode(value1, value2) {
-        return {
-            value1 : value1,
-            value2 : value2,
-            next : null,
-            prev : null
-        };
-    }
     function addIndex(index, node) {
         var indexNode = makeIndexNode(node);
         if (indexes[index]) {
