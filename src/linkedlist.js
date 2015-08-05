@@ -1,4 +1,4 @@
-var linkedList = (function () {
+var linkedList = (function() {
 
     function makeNode(data) {
         return {
@@ -7,14 +7,14 @@ var linkedList = (function () {
             next : null
         };
     }
-    
+
     function makeIndexNode(node) {
         return {
             node : node,
             next : null
         };
     }
-    
+
     function makeResultNode(value1, value2) {
         return {
             value1 : value1,
@@ -24,9 +24,9 @@ var linkedList = (function () {
         };
     }
 
-    var list = function(){
+    var list = function() {
         var start = null, end = null, resultsStart = null, resultsEnd = null, indexes = [], endIndexes = [];
-        
+
         function addIndex(index, node) {
             var indexNode = makeIndexNode(node);
             if (indexes[index]) {
@@ -37,7 +37,7 @@ var linkedList = (function () {
                 endIndexes[index] = indexNode;
             }
         }
-        
+
         function addResultNode(value1, value2) {
             var node = makeResultNode(value1, value2);
             if (resultsStart === null) {
@@ -48,7 +48,7 @@ var linkedList = (function () {
                 resultsEnd = node;
             }
         }
-        
+
         function getResultsList() {
             var save = resultsStart, results = [];
             while (save != null) {
@@ -57,7 +57,7 @@ var linkedList = (function () {
             }
             return results;
         }
-        
+
         function findNextAvailbleIndexNode(index) {
             var save = indexes[index];
             while (save != null && !save.node.isAvailable) {
@@ -65,7 +65,7 @@ var linkedList = (function () {
             }
             return save;
         }
-        
+
         this.add = function(data) {
             if (data && data.length === 2) {
                 var values = data.split("");
@@ -92,6 +92,7 @@ var linkedList = (function () {
             }
             return results;
         };
+
         this.findSeries = function() {
             var currentNode = null, index = 0, value1, value2;
             while (indexes[index] === undefined) {
@@ -111,6 +112,6 @@ var linkedList = (function () {
             }
             return getResultsList();
         };
-    } 
+    }
     return list;
 })();
