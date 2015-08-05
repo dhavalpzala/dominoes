@@ -112,6 +112,7 @@ var linkedList = (function() {
             }
             return getResultsList();
         };
-    }
+    };
+
     return list;
 })();
